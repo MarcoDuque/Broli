@@ -1,0 +1,83 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 50%;
+}
+
+mat-sidenav{
+  background-color: #f2f2f2;
+}
+
+mat-nav-list{
+  text-align: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+}
+
+.sidenav-button{
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: auto;
+  background-color: #343a40;
+}
+
+@media  (min-width: 768px) {
+  .toogle-menu{
+    display: none;
+  }
+  .sidenav{
+    display: none;
+  }
+}
+
+@media  (max-width: 769px) {
+  .menuNav{
+    display: none;
+  }
+}
+
+.navbar-side{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+.logo-sidenav {
+  width: 40px;
+  height: 40px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 2%;
+}
+
+.menuNav {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(222, 214, 214);
+  border: none;
+  padding: 10px 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.menuNav:hover {
+  background-color: #464d55;
+  color: rgb(255, 255, 255);
+  border-radius: 10%;
+}
+

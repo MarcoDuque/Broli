@@ -1,0 +1,45 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-toolbar class="navbar-side">
+      <img mat-card-image class="logo-sidenav" src="assets/images/getShl.png">
+    </mat-toolbar>
+    <mat-nav-list *ngFor="let navItem of navbar">
+      <button class="sidenav-button" *ngIf="navItem.submenu && navItem.submenu.length > 0" mat-button
+        [matMenuTriggerFor]="submenu">
+        {{navItem.name}}
+        <mat-icon fontIcon={{navItem.icon}}></mat-icon>
+      </button>
+      <mat-menu #submenu="matMenu" xPosition="before">
+        <button mat-menu-item *ngFor="let subItem of navItem.submenu">
+          {{ subItem.itemName }}
+        </button>
+      </mat-menu>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <img mat-card-image class="logo" src="assets/images/getShl.png">
+
+      @if (isHandset$ | async) {
+      <button type="button" class="toogle-menu" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      }
+
+      <ng-container *ngFor="let navItem of navbar">
+        <button mat-button class="menuNav" *ngIf="navItem.submenu && navItem.submenu.length > 0"
+          [matMenuTriggerFor]="submenu">
+          {{navItem.name}}
+        </button>
+        <mat-menu #submenu="matMenu">
+          <button mat-menu-item *ngFor="let subItem of navItem.submenu" [routerLink]="'Customers'">
+            {{ subItem.itemName }}
+          </button>
+        </mat-menu>
+      </ng-container>
+
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

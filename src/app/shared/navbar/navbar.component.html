@@ -1,0 +1,50 @@
+<mat-toolbar>
+    <img mat-card-image class="logo" src="assets/images/getShl.png">
+
+    <button class="menuNav" mat-button [matMenuTriggerFor]="store">Tienda</button>
+    <mat-menu #store="matMenu">
+        <button mat-menu-item>POS</button>
+        <button mat-menu-item>Items</button>
+        <button mat-menu-item>Catogorias</button>
+    </mat-menu>
+
+    <button class="menuNav" mat-button [matMenuTriggerFor]="customers">Clientes</button>
+    <mat-menu #customers="matMenu">
+        <button mat-menu-item>Clientes</button>
+        <button mat-menu-item>Empresas</button>
+        <button mat-menu-item>Unificar Duplicados</button>
+        <button mat-menu-item>Subir Fotos en Bloque</button>
+    </mat-menu>
+
+    <button class="menuNav" mat-button [matMenuTriggerFor]="courses">Cursos</button>
+    <mat-menu #courses="matMenu">
+        <button mat-menu-item>Cursos</button>
+        <button mat-menu-item>Inscripciones</button>
+        <button mat-menu-item>Tarifas</button>
+        <button mat-menu-item>tarifas X Especialidad</button>
+    </mat-menu>
+
+    <button class="menuNav" mat-button [matMenuTriggerFor]="invoices">Facturas</button>
+    <mat-menu #invoices="matMenu">
+        <button mat-menu-item>Facturas</button>
+    </mat-menu>
+
+    <button class="menuNav" mat-button [matMenuTriggerFor]="reports">Reportes</button>
+    <mat-menu #reports="matMenu">
+        <button mat-menu-item>Reporte Facturas</button>
+        <button mat-menu-item>Reporte Pagos</button>
+        <button mat-menu-item>Tarjetas por Expirar</button>
+        <button mat-menu-item>Tarjetas Expiradas</button>
+    </mat-menu>
+
+    <button class="menuNav" mat-button [matMenuTriggerFor]="settings">Configuracion</button>
+    <mat-menu #settings="matMenu">
+        <button mat-menu-item>Agencias</button>
+        <button mat-menu-item>Especialidades</button>
+        <button mat-menu-item>Locaciones</button>
+        <button mat-menu-item>Usuarios</button>
+        <button mat-menu-item>Enviar SMS</button>
+    </mat-menu>
+
+    <button class="menuNav" mat-button >Salir</button>
+</mat-toolbar>
