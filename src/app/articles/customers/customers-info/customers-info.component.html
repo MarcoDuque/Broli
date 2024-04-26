@@ -1,0 +1,52 @@
+<div class="customer-info">
+    <form>
+        <h1 class="tittle">Crete Customer</h1>
+
+        <mat-divider></mat-divider>
+
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Middle</mat-label>
+            <input matInput>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input matInput>
+        </mat-form-field>
+
+        <mat-form-field class="dob-date">
+            <mat-label>DOB</mat-label>
+            <input matInput [matDatepicker]="datepicker">
+            <mat-hint>DD/MM/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+            <mat-datepicker #datepicker>
+                <mat-datepicker-actions>
+                    <button mat-button matDatepickerCancel>Cancel</button>
+                    <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                </mat-datepicker-actions>
+            </mat-datepicker>
+        </mat-form-field>
+
+
+        <input matInput class="mat-form-field-sm" placeholder="Code" autocomplete="none" id="middle">
+
+
+        <input matInput class="mat-form-field-sm" placeholder="Code" autocomplete="none" id="lastName">
+
+        <input matInput class="mat-form-field-sm" placeholder="Code" autocomplete="none">
+        <input matInput class="mat-form-field-sm" placeholder="Code" autocomplete="none">
+        <input matInput class="mat-form-field-sm" placeholder="Code" autocomplete="none">
+        <input matInput class="mat-form-field-sm" placeholder="Code" autocomplete="none">
+        <input matInput class="mat-form-field-sm" placeholder="Code" autocomplete="none">
+        <input matInput class="mat-form-field-sm" placeholder="Code" autocomplete="none">
+    </form>
+    <button mat-raised-button color="primary" class="create-update-user-button">
+        <mat-icon aria-hidden="false" fontIcon="save"></mat-icon>
+        Save
+    </button>
+</div>

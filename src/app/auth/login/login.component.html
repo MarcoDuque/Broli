@@ -6,34 +6,33 @@
     </mat-card-header>
 
     <mat-card-content>
+      <form [formGroup]="formLogin" (ngSubmit)="submit()">
+        <img mat-card-image class="logo" src="assets/images/getShl.png">
 
-      <img mat-card-image class="logo" src="assets/images/getShl.png">
-      <mat-divider inset></mat-divider>
+        <mat-form-field class="custom-input">
+          <input matInput formControlName="username">
+          <mat-label>Username</mat-label>
+          <mat-icon matPrefix fontIcon="person"></mat-icon>
+          <mat-error [hidden]="username.valid">
+            Username it's mandatory.
+          </mat-error>
+        </mat-form-field>
 
-      <form #loginForm="">
+        <mat-form-field>
+          <input matInput type="password" autocomplete="none" formControlName="password">
+          <mat-label> Password </mat-label>
+          <mat-icon matPrefix fontIcon="key"></mat-icon>
+          <mat-error [hidden]="password.valid">
+            Password it's mandatory.
+          </mat-error>
+        </mat-form-field>
 
-        <p>
-          <mat-form-field >
-            <input type="text" matInput placeholder="Username" formControlName="username">
-            <mat-icon matPrefix fontIcon="person"></mat-icon>
-          </mat-form-field>
-        </p>
-        <p>
-          <mat-form-field>
-            <input type="password" matInput placeholder="Password" formControlName="username">
-            <mat-icon matPrefix fontIcon="key"></mat-icon>
-          </mat-form-field>
-        </p>
-
-        <button mat-flat-button color="primary" [routerLink]="['/home']" >Ingresar</button>
+        <button mat-flat-button color="primary" type="submit" [disabled]="formLogin.invalid">Ingresar</button>
       </form>
-
-
     </mat-card-content>
-
     <mat-card-footer>
       <mat-divider></mat-divider>
-      <P>Power by <a href="Shlomo.us">Shlomos Us</a></P>
+      <P class="banner-shlomo">Power by <a href="https://shlomo.us/" target="_blank">shlomo.us</a></P>
     </mat-card-footer>
 
   </mat-card>

@@ -1,1 +1,23 @@
-<p>customer-home works!</p>
+<section class="customer-home">
+    <div class="new-customer">
+        <button mat-flat-button class="btn-new-customer" (click)="openModal()">
+            <mat-icon aria-hidden="false" fontIcon="person_add"></mat-icon>
+            New Customer
+        </button>
+    </div>
+    <div class="search-customer">
+        
+        <form>
+            <p class="school-code">School code</p>
+            <input matInput class="mat-form-field-sm" placeholder="Code" autocomplete="none">
+            <input matInput class="mat-form-field-sm" placeholder="Phone" autocomplete="none">
+            <input matInput class="mat-form-field-sm" placeholder="First name" autocomplete="none">
+            <input matInput class="mat-form-field-sm" placeholder="Middle name" autocomplete="none">
+            <input matInput class="mat-form-field-sm" placeholder="Last name" autocomplete="none">
+            <button mat-flat-button class="btn-search-customer">
+                <mat-icon aria-hidden="false" fontIcon="search"></mat-icon>
+                Search
+            </button>
+        </form>
+    </div>
+</section>
