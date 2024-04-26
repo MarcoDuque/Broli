@@ -11,7 +11,7 @@
         <mat-icon fontIcon={{navItem.icon}}></mat-icon>
       </button>
       <mat-menu #submenu="matMenu" xPosition="before">
-        <button mat-menu-item *ngFor="let subItem of navItem.submenu">
+        <button mat-menu-item *ngFor="let subItem of navItem.submenu" routerLink={{subItem.itemLink}}>
           {{ subItem.itemName }}
         </button>
       </mat-menu>
@@ -33,12 +33,11 @@
           {{navItem.name}}
         </button>
         <mat-menu #submenu="matMenu">
-          <button mat-menu-item *ngFor="let subItem of navItem.submenu" [routerLink]="'Customers'">
+          <button mat-menu-item *ngFor="let subItem of navItem.submenu" routerLink={{subItem.itemLink}}>
             {{ subItem.itemName }}
           </button>
         </mat-menu>
       </ng-container>
-
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>

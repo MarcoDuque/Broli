@@ -23,7 +23,7 @@ export const navbarConstants = [
         submenu: [
             {
                 itemName: "Clientes",
-                itemLink: "Customers"
+                itemLink: "customers"
             },
             {
                 itemName: "Empresas",
